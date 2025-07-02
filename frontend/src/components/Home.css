@@ -1,0 +1,116 @@
+ /* Home page animations */
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slide-up-fade-in {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes move-bg {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  @keyframes float-bubble-1 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(20px, -30px) rotate(90deg); }
+    50% { transform: translate(-15px, -50px) rotate(180deg); }
+    75% { transform: translate(-25px, -20px) rotate(270deg); }
+  }
+  
+  @keyframes float-bubble-2 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(30px, -40px) rotate(120deg); }
+    66% { transform: translate(-20px, -30px) rotate(240deg); }
+  }
+  
+  @keyframes float-bubble-3 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(25px, -35px) rotate(180deg); }
+  }
+  
+  @keyframes float-bubble-4 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-30px, -25px) rotate(90deg); }
+    50% { transform: translate(-15px, -45px) rotate(180deg); }
+    75% { transform: translate(20px, -35px) rotate(270deg); }
+  }
+  
+  .fade-in {
+    animation: fade-in 1s ease-out both;
+  }
+  
+  .slide-up-fade-in {
+    animation: slide-up-fade-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  
+  .move-bg {
+    background: linear-gradient(90deg, #fdf6fa 0%, #f3e8fd 100%, #fdf6fa 200%);
+    background-size: 200% 200%;
+    animation: move-bg 16s linear infinite;
+  }
+  
+  .bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.4;
+    z-index: 1;
+  }
+  
+  .bubble-1 {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    animation: float-bubble-1 20s ease-in-out infinite;
+  }
+  
+  .bubble-2 {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #a6c1ee, #fbc2eb);
+    animation: float-bubble-2 25s ease-in-out infinite;
+  }
+  
+  .bubble-3 {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #fbc2eb, #f3e8fd);
+    animation: float-bubble-3 18s ease-in-out infinite;
+  }
+  
+  .bubble-4 {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #f3e8fd, #a6c1ee);
+    animation: float-bubble-4 22s ease-in-out infinite;
+  }
+  
+  .card-hover, .ghover {
+    transition: box-shadow 0.3s, transform 0.3s, filter 0.3s;
+  }
+  .card-hover:hover, .ghover:hover {
+    box-shadow: 0 8px 32px rgba(233, 30, 99, 0.10), 0 1.5px 8px rgba(156, 39, 176, 0.08);
+    transform: scale(1.045);
+    filter: brightness(1.03);
+  }
+  
+  .ghover-img {
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s;
+  }
+  .ghover-img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 32px rgba(233, 30, 99, 0.13), 0 1.5px 8px rgba(156, 39, 176, 0.10);
+  }
+  
+  .ghover-btn {
+    transition: transform 0.25s, filter 0.25s;
+  }
+  .ghover-btn:hover {
+    transform: scale(1.04);
+    filter: brightness(1.08);
+  }
+  
